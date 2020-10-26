@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Credit Card Default</title>
+    <style>
+    body{
+      background-color: #34495e;
+    }
+      .widths{
+        width: 480px;
+      }
+      button{
+        width: 400px;
+        height: 30px;
+        background-color:#95a5a6;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>Credit Card Default Predictor</h1>
+      <form action="/result" method="POST">
+        <table>
+          <tr>
+            <th>Limited Balance</th>
+            <th><input type="text" name="LIMIT_BAL" placeholder="in NT Dollar" size="69"></th>
+          </tr>
+          <tr>
+            <th>Graduation</th>
+            <th><select name="EDUCATION" class="widths">
+                <option value="1">Graduate School</option>
+                <option value="2">University</option>
+                <option value="3">High School</option>
+                <option value="4">Others</option>
+              </select>
+            </th>
+          </tr>
+          <tr>
+            <th>Marriage</th>
+            <th><select name="MARRIAGE" class="widths">
+              <option value="1">Married</option>
+              <option value="2">Single</option>
+              <option value="3">Others</option>
+            </select>
+          </th>
+          </tr>
+          <tr>
+            <th class="widths">Age</th>
+            <th><input type="text" name="AGE" placeholder="in years" size="69"></th>
+          </tr>
+          <tr>
+            <th>Repayment Status</th>
+            <th><select name="PAY_1" class="widths">
+              <option value="-2"> Account started that month with a zero balance, and never used any credit</option>
+              <option value="-1"> Account had a balance that was paid in full</option>
+              <option value="0"> At least the minimum payment was made, but the entire balance wasn't paid</option>
+              <option value="1"> Payment delay for 1 month</option>
+              <option value="2"> Payment delay for 2 month</option>
+              <option value="3"> Payment delay for 3 month</option>
+              <option value="4"> Payment delay for 4 month</option>
+              <option value="5"> Payment delay for 5 month</option>
+              <option value="6"> Payment delay for 6 month</option>
+              <option value="7"> Payment delay for 7 month</option>
+              <option value="8"> Payment delay for 8 month</option>
+            </select></th>
+          </tr>
+          <tr>
+            <th colspan="2"><h2>Bill Amount For Past 6 Months</h2></th>
+          </tr>
+          <tr>
+            <th>Last Month Bill Amount</th>
+            <th><input type="text" name="BILL_AMT1" size="69" placeholder="in NT Dollar"></th>
+          </tr>
+          <tr>
+            <th>Last 2nd Month Bill Amount</th>
+            <th><input type="text" name="BILL_AMT2" size="69" placeholder="in NT Dollar"></th>
+          </tr>
+          <tr>
+            <th>Last 3rd Month Bill Amount</th>
+            <th><input type="text" name="BILL_AMT3" size="69" placeholder="in NT Dollar"></th>
+          </tr>
+          <tr>
+            <th>Last 4th Month Bill Amount</th>
+            <th><input type="text" name="BILL_AMT4" size="69" placeholder="in NT Dollar"></th>
+          </tr>
+          <tr>
+            <th>Last 5th Month Bill Amount</th>
+            <th><input type="text" name="BILL_AMT5" size="69" placeholder="in NT Dollar"></th>
+          </tr>
+          <tr>
+            <th>Last 6th Month Bill Amount</th>
+            <th><input type="text" name="BILL_AMT6" size="69" placeholder="in NT Dollar"></th>
+          </tr>
+          <tr>
+            <th colspan="2"><h2>Paid Amount For Past 6 Months</h2></th>
+          </tr>
+          <tr>
+            <th>Amount paid in Last Month</th>
+            <th><input type="text" name="PAY_AMT1" size="69" placeholder="in NT Dollar"></th>
+          </tr>
+          <tr>
+            <th>Amount paid in Last 2nd Month</th>
+            <th><input type="text" name="PAY_AMT2" size="69" placeholder="in NT Dollar"></th>
+          </tr>
+          <tr>
+            <th>Amount paid in Last 3rd Month</th>
+            <th><input type="text" name="PAY_AMT3" size="69" placeholder="in NT Dollar"></th>
+          </tr>
+          <tr>
+            <th>Amount paid in Last 4th Month</th>
+            <th><input type="text" name="PAY_AMT4" size="69" placeholder="in NT Dollar"></th>
+          </tr>
+          <tr>
+            <th>Amount paid in Last 5th Month</th>
+            <th><input type="text" name="PAY_AMT5" size="69" placeholder="in NT Dollar"></th>
+          </tr>
+          <tr>
+            <th>Amount paid in Last 6th Month</th>
+            <th><input type="text" name="PAY_AMT6" size="69" placeholder="in NT Dollar"></th>
+          </tr>
+        </table><br>
+        <button type="submit" name="Predict">PREDICT</button>
+      </form>
+    </center>
+  </body>
+</html>
